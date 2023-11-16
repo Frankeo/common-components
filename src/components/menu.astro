@@ -15,17 +15,24 @@ const { title, pages, medias } = Astro.props;
       <p class="title">{title}</p>
     </a>
 
-    <a
-      role="button"
-      class="navbar-burger"
-      aria-label="menu"
-      aria-expanded="false"
-      data-target="navbarPages"
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+    {
+      (pages !== undefined && pages.length > 0) ||
+      (medias !== undefined && medias.length > 0) ? (
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarPages"
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </a>
+      ) : (
+        ""
+      )
+    }
   </div>
 
   <div id="navbarPages" class="navbar-menu">
