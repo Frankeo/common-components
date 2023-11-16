@@ -8,7 +8,8 @@
   },
   "files": [
     "src/components/*",
-    "env.d.ts",
+    "src/env.d.ts",
+    "src/index.ts",
     "index.ts"
   ],
   "scripts": {
