@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/Frankeo/common-components/compare/v0.0.8...v0.0.9) (2023-11-16)
+
+### Bug Fixes
+
+- for menu when there is no pages nor medias ([6b3d0a6](https://github.com/Frankeo/common-components/commit/6b3d0a633fbbb26d6855636bfa00f0142fef7c14))
+
 ### [0.0.8](https://github.com/Frankeo/common-components/compare/v0.0.7...v0.0.8) (2023-11-16)
 
 ### Bug Fixes
