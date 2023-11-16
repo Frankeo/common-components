@@ -14,9 +14,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "ci-build": "yarn pre-push && yarn release && yarn npm punlish",
+    "ci-build": "yarn check-format && yarn lint",
     "lint": "stylelint '**/*.astro' && eslint '**/*.{ts,astro}'",
-    "pre-push": "yarn check-format && yarn lint",
+    "pre-push": "yarn check-format && yarn lint && yarn release",
     "check-format": "prettier . --check",
     "release": "standard-version",
     "prepare": "husky install"
