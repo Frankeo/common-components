@@ -1,0 +1,82 @@
+---
+import "@fortawesome/fontawesome-free/css/all.css";
+import { type MenuProps as Props } from "./menu-props";
+import "bulma";
+
+const { title, pages, medias } = Astro.props;
+---
+
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <figure class="image is-32x32 is-flex is-align-items-center">
+        <img src="/favicon.svg" />
+      </figure>
+      <p class="title">{title}</p>
+    </a>
+
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarPages"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarPages" class="navbar-menu">
+    <div class="navbar-start">
+      {
+        pages?.map((link) => {
+          return (
+            <a class="navbar-item" href={link.href}>
+              {link.name}
+            </a>
+          );
+        })
+      }
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          {
+            medias?.map((media) => {
+              return (
+                <a
+                  class="button is-primary is-outlined is-light is-rounded"
+                  href={media.href}
+                >
+                  <span class="icon">
+                    <i class={`fa-brands fa-lg fa-${media.logo}`} />
+                  </span>
+                </a>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const $navbarBurgers = Array.prototype.slice.call(
+      document.querySelectorAll(".navbar-burger"),
+      0,
+    );
+
+    $navbarBurgers.forEach((el) => {
+      el.addEventListener("click", () => {
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+        el.classList.toggle("is-active");
+        $target?.classList.toggle("is-active");
+      });
+    });
+  });
+</script>

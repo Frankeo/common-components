@@ -1,0 +1,42 @@
+---
+import { type Media, type Page } from "../components/menu-props";
+import Menu from "../components/menu.astro";
+
+const pages = [
+  {
+    href: "/events",
+    name: "Events",
+  },
+  {
+    href: "/contact",
+    name: "Contacts",
+  },
+] as Page[];
+
+const medias = [
+  {
+    href: "/events",
+    logo: "facebook-f",
+  },
+  {
+    href: "/contact",
+    logo: "instagram",
+  },
+] as Media[];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Testing</title>
+  </head>
+  <body style="overflow-x: hidden;">
+    <Menu title="pepe" pages={pages} medias={medias} />
+  </body>
+</html>

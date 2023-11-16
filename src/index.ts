@@ -1,3 +1,3 @@
-export { default as Card } from "./components/card.astro";
-export type { CardProps } from "./components/card-props";
-export * from "./components/card.astro";
+export { default as Menu } from "./components/menu.astro";
+export type { MenuProps } from "./components/menu-props";
+export * from "./components/menu.astro";
