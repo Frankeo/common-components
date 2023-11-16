@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/Frankeo/common-components/compare/v0.0.7...v0.0.8) (2023-11-16)
+
+### Bug Fixes
+
+- update files exported by package ([e7a3430](https://github.com/Frankeo/common-components/commit/e7a3430cf25e964ae7c645b190b1ab3903d6e4e5))
+
 ### [0.0.7](https://github.com/Frankeo/common-components/compare/v0.0.6...v0.0.7) (2023-11-16)
 
 ### [0.0.6](https://github.com/Frankeo/common-components/compare/v0.0.5...v0.0.6) (2023-11-16)
