@@ -1,0 +1,53 @@
+{
+  "name": "common-components-astro",
+  "version": "0.0.2",
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "src/components/*",
+    "env.d.ts",
+    "index.ts"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "ci-build": "yarn pre-push && yarn release && yarn npm punlish",
+    "lint": "stylelint '**/*.astro' && eslint '**/*.{ts,astro}'",
+    "pre-push": "yarn check-format && yarn lint",
+    "check-format": "prettier . --check",
+    "release": "standard-version",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.1",
+    "astro": "^3.5.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "bulma": "0.9.4",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "postcss-html": "^1.5.0",
+    "prettier": "3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
+    "standard-version": "^9.5.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^34.0.0",
+    "typescript": "^5.2.2"
+  }
+}
