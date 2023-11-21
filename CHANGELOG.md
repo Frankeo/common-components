@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.10](https://github.com/Frankeo/common-components/compare/v0.0.9...v0.0.10) (2023-11-21)
+
+### Bug Fixes
+
+- add title as white in dark colors preferences ([3e6ec63](https://github.com/Frankeo/common-components/commit/3e6ec631d4b15eb9f08e3b8500392e99ecbb8833))
+
 ### [0.0.9](https://github.com/Frankeo/common-components/compare/v0.0.8...v0.0.9) (2023-11-16)
 
 ### Bug Fixes
