@@ -1,5 +1,5 @@
 ---
-import { type Media, type Page } from "../components/menu-props";
+import type { Session, Media, Page } from "../components/menu-props";
 import Menu from "../components/menu.astro";
 
 const pages = [
@@ -23,6 +23,10 @@ const medias = [
     logo: "instagram",
   },
 ] as Media[];
+const session: Session = {
+  hrefSignIn: "/signin",
+  hrefSignOut: "/signout",
+};
 ---
 
 <html lang="en">
@@ -37,6 +41,6 @@ const medias = [
     <title>Testing</title>
   </head>
   <body style="overflow-x: hidden;">
-    <Menu title="pepe" pages={pages} medias={medias} />
+    <Menu title="pepe" pages={pages} medias={medias} session={session} />
   </body>
 </html>

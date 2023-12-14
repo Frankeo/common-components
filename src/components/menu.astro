@@ -1,9 +1,10 @@
 ---
 import "@fortawesome/fontawesome-free/css/all.css";
 import { type MenuProps as Props } from "./menu-props";
+import { getAbbrevation } from "./util";
 import "bulma";
 
-const { title, pages, medias } = Astro.props;
+const { title, pages, medias, session } = Astro.props;
 ---
 
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
@@ -63,6 +64,35 @@ const { title, pages, medias } = Astro.props;
                 </a>
               );
             })
+          }
+          {
+            session !== undefined ? (
+              session?.user !== undefined ? (
+                <a
+                  class="button is-primary is-outlined is-light is-rounded"
+                  href={session.hrefSignOut}
+                >
+                  <span class="icon">
+                    {getAbbrevation(session.user).map((character, index) => (
+                      <i
+                        class={`fa-solid fa-${character} ${
+                          index === 1 ? "ml-1" : ""
+                        }`}
+                      />
+                    ))}
+                  </span>
+                </a>
+              ) : (
+                <a
+                  class="button is-primary is-light is-rounded is-outlined"
+                  href={session.hrefSignIn}
+                >
+                  Login
+                </a>
+              )
+            ) : (
+              ""
+            )
           }
         </div>
       </div>

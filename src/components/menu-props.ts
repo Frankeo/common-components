@@ -14,4 +14,11 @@ export interface MenuProps {
   title: string;
   pages?: Page[];
   medias?: Media[];
+  session?: Session;
+}
+
+export interface Session {
+  hrefSignIn: string;
+  hrefSignOut: string;
+  user?: string;
 }
