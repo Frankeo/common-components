@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/Frankeo/common-components-astro/compare/v0.0.11...v0.0.12) (2023-12-14)
+
+### Features
+
+- add sign in and sign out to the menu bar ([8df2bf5](https://github.com/Frankeo/common-components-astro/commit/8df2bf5f98a1da3768db5af8d93e81289a42128e))
+
 ### [0.0.11](https://github.com/Frankeo/common-components/compare/v0.0.10...v0.0.11) (2023-11-21)
 
 ### [0.0.10](https://github.com/Frankeo/common-components/compare/v0.0.9...v0.0.10) (2023-11-21)
